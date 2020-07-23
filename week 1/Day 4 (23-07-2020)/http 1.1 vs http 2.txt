@@ -1,0 +1,16 @@
+HTTP/1.1:-
+Developed by Timothy Berners-Lee as a communication standard for the World Wide Web
+The requests and responses will go back and forth between the server and client until the web browser has received all the resources necessary to render the contents of the HTML page on your screen.
+HTTP/1.1, which keeps all requests and responses in plain text format.
+Uses text-based commands to complete HTTP requests.
+With persistent connections, HTTP/1.1 assumes that a TCP connection should be kept open unless directly told to close.
+
+HTTP/2:-
+HTTP/2 began as the SPDY protocol, developed primarily at Google with the intention of reducing web page load latency by using techniques such as compression.
+HTTP/2 leaves all of HTTP 1.1's high-level semantics, such as methods, status codes, header fields, and URIs, the same. What is new is how the data is framed and transported between the client and the server.
+New applications can take advantage of new features for increased speed.
+Websites that are efficient minimize the number of requests required to render an entire page (reducing the amount of code and packing smaller pieces of code into bundles).
+HTTP/2 allows the server to "push" content, that is, to respond with data for more queries than the client requested.
+HTTP/2 no longer supports HTTP 1.1's chunked transfer encoding mechanism, as it provides its own, more efficient, mechanisms for data streaming.
+HTTP/2 runs on top of a single TCP connection.
+HTTP/2 uses the binary framing layer to encapsulate all messages in binary format.
