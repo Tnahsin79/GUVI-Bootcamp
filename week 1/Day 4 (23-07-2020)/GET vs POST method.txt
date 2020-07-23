@@ -1,0 +1,12 @@
+The GET Method:-
+GET is used to request data from a specified resource.
+GET is one of the most common HTTP methods.
+Data is requested from a specific resource in the form of an url.
+The GET method is restricted to send upto 1024 characters only.
+
+
+The POST Method:-
+POST is used to send data to a server to create/update a resource.
+The data sent to the server with POST is stored in the request body of the HTTP request.
+Data is submitted to be processed to a specific resource.
+The POST method does not have any restriction on data size to be sent.
