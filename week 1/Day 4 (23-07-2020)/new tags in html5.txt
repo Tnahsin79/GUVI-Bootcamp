@@ -1,0 +1,29 @@
+HTML5 offers new semantic elements to define different parts of a web page:
+
+<article>  
+A self-contained composition in a document that is independently distributable or reusable, e.g. a forum post, a magazine or newspaper article, or blog entry.
+Represents an independent piece of content of a document, such as a blog entry or newspaper article.
+
+<aside>  
+Defines content tangentially related to the content surrounding it, such as related reading links and glossaries, which may or not be nested within an article element.
+Represents a piece of content that is only slightly related to the rest of the page.
+
+<section>  
+Unlike the <div> tag, which is used for a myriad of purposes, not the least of which is formatting content, the <section> element demarcates a thematic grouping of content. 
+Each section typically includes a heading element and associated content within DIVs and Paragraphs. Examples include introduction, blog entries, and contact information.
+Represents a generic document or application section.
+
+<nav>  
+Denotes a section with navigation links, either to other pages or to parts within the same page.
+Represents a section of the document intended for navigation.
+
+<header>  
+Not be confused with the <head> element, the <header> tag typically contains the section?s heading (an h1?h6 element), as well as other content, such as a navigation links, 
+table of contents, a search form, or any relevant logos.
+Represents a group of introductory or navigational aids.
+
+<footer>  
+For content located at the very bottom of the web page or nearest section. A footer typically contains information about its section such as who wrote it, 
+links to related documents, copyright data, etc. It in turn may contain entire sections, with appendices, indexes, license agreements, and other similar content.
+Represents a footer for a section and can contain information about the author, copyright information, et cetera.
+
