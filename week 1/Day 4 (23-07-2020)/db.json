@@ -1,6 +1,6 @@
 {
 "countries":[{
-  name: 'Afghanistan',
+  "name": 'Afghanistan',
   topLevelDomain: [ '.af' ],
   alpha2Code: 'AF',
   alpha3Code: 'AFG',
