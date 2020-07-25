@@ -1,0 +1,73 @@
+body{
+	background-color:black;
+	background-image: url("bg.jpg");
+}
+
+li{
+	font-family:serif;
+}
+
+h1{
+	font-family:serif;
+	text-align:center;
+}
+
+.navbar{
+	margin:20px;
+	border: 3px solid black;
+	padding-top:10px;
+	font-family:serif;
+	font-size:15px;
+}
+
+#nametag{
+	margin:20px;
+	border: 3px solid black;
+	padding:20px;
+}
+
+#about-me{
+	margin:20px;
+	font-family:serif;
+	font-size:20px;
+	padding:10px;
+	padding-left:25px;
+	background-color:FF5B33;
+	border-radius: 15px 50px 30px;
+}
+
+#tq{
+	height:140px;
+	color:white;
+	padding: 15px;
+    text-align:center;
+	background-color:FF5B33;
+	border-radius: 15px 50px 30px;
+}
+
+th{
+	height: 50px;
+	text-align:center;
+}
+
+p{
+	border-radius: 15px 50px 30px;
+}
+
+#skills{
+	border-radius: 15px 50px 30px;
+	background-color:FF5B33;
+	font-family:serif;
+	color:white;
+	font-size:20px;
+	text-align:center;
+	width: 50%;
+}
+ul{
+	display: inline-block; text-align: left;
+}
+img{
+	 border: 5px solid black;
+	 height:80%;
+	 width:80%;
+}
