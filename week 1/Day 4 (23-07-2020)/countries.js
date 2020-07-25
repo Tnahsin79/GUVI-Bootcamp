@@ -3,7 +3,9 @@ var i;
 
 for(i=0;i<a.length;i++)
 {
-	a[i]["id"]=i+1;
+	a[i].id=i+1;
+	//var obj = JSON.parse(a[i]);
+	//console.log(obj);
+	
 }
-console.log(a);
-
+console.log(JSON.stringify(a,null,1));
