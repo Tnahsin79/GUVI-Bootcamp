@@ -1,0 +1,101 @@
+Broweser consists of Bindings, rendering(parsing, layout, printing, etc), platform and javascript virtual machine.
+(parse HTML+Parse CSS)->Render tree->Lauout->Print.
+
+Parsing HTML:
+-HTML can be forgiving in nature.
+-Parsing isn't straightforward.
+-can be halted.
+-will do speculative parsing.
+-it is reentrant.
+
+Opening tags consists of 3 parts:
+-tag open <
+-tag name 
+-tag close >
+
+closing tags consists of 3 parts:
+-close tag open </
+-tag name
+-tag close >
+
+parse tree is converted into DOM tree.
+
+<script>, <link> and <style> tag halt the parser as a script can alter the document.
+-Network latency
+-link and style could halt JS execution.
+
+Speculatiove parsing:
+-will look ahead
+-External images, script,css
+
+Reentrant:
+It means the parsing process can be iterrupted.
+Script Execution->Tokeniser->Tree construction->DOM->Script Execution.
+
+PERFORMANCE INSIGHT
+1. </script> at the bottom
+-faster to rendering
+-parse uninterrupted
+-defer ans async attributes
+-Trade off
+PARSING A HTML DOCUMENT
+CSS PARSING
+-It will CSS object model.
+
+2. RENDER/FRAME TREE
+-DOM+CSSOM
+-combines two object model, style resolution.
+(parse HTML+JS+Parse CSS)->Render tree->Lauout->Print
+-Multiple trees (RenderObjects, RenderStyles, RenderLayers, Line boxes)
+non visual elements are not in render tree like head, script, title,etc.
+
+DOM node to RenderObjects:
+-visual output
+-Geometric info
+-Can layout and paint
+-hold styles and computed metrics.
+
+Calculating visual properties:
+-combines all styles
+-defaults, external, style elements and inline
+-Complexity around matching rules for each element
+-Style computation
+
+3. LAYOUT
+Recursive process:
+-Traverse render tree
+-Nodes position and size
+-layouts its children
+
+Will batch layouts:
+-Incremental layouts
+-Asynchronous
+
+REAL WORLD
+-FastDom, Preventing layout thrashing
+-most modern JS framework do this internally.
+
+4. PAINT:
+Paint setup:
+-will take the layed out render tree
+-creates layers
+-Incremental process
+-Builds up over 12 phases
+Render layers:
+-creates layers from RenderObjects
+Painting:
+-produces a bitmap from each layer.
+-Bitmap is uploaded to the GPU as a texture.
+-Coposites the textures into a final image to render to the screen.
+inline critival CSS:
+-The most important bits of your site/app.
+-speeds up first paint times
+-External js and css can block
+-Delta last bitmap
+
+--RECAP--
+-Parsing->DOM tree
+-DOM tree->Render tree
+-is actually 4 trees
+-Layout computes where a node will be on the screen
+-painting computes bitmaps and composites to screen.
