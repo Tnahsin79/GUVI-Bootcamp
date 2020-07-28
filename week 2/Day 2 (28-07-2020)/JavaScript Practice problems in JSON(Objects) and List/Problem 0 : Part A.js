@@ -15,28 +15,39 @@ var cat = {
  }
  ]
 }
-//console.log(cat);
 
 cat["height"]=7;
 cat["weight"]=9;
 cat["name"]='Fluffyy';
-var act=cat["catFriends"];
-var sow=0;
-var i;
-var l=act.length;
-//console.log(l);
+//console.log(cat);
+
+var i,act=[],sow=0;
+var l=cat["catFriends"].length;
 for(i=0;i<l;i++)
 {
-	console.log(act[i]["name"]);
-	console.log(act[i]["activities"]);
-	sow+=a[i]["weight"];
+    for(j=0;j<cat["catFriends"][i]["activities"].length;j++)
+    {
+        act.push(cat["catFriends"][i]["activities"][j]);
+    }
+	sow+=cat["catFriends"][i]["weight"];
 }
+console.log(act);
 console.log("sum of weight =",sow);
+
+for(i=0;i<cat["activities"].length;i++)
+act.push(cat["activities"][i]);
+console.log(act);
+
 for(i=0;i<cat["catFriends"].length;i++)
 {
 	cat["catFriends"][i]["activities"].push('activity1');
 	cat["catFriends"][i]["activities"].push('activity2');
 }
+for(i=0;i<cat["catFriends"].length;i++)
+{
+    console.log(cat["catFriends"][i]["activities"]);
+}
+
 cat["catFriends"][0]["furcolor"]='pink';
 
 console.log(cat);
