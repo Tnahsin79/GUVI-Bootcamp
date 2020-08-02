@@ -1,0 +1,61 @@
+class tv{
+    constructor(brand,price,inches){
+        this.brand=brand;
+        this.price=price;
+        this.inches=inches;
+        this.channel=1;
+        this.volume=50;
+        this.status="off";
+    }
+    ivolume(vol){
+        this.volume=this.volume+vol;
+        if(this.volume>100)
+        this.volume=100;
+    }
+    dvolume(vol){
+        if(this.volume<vol)
+        this.volume=0;
+        else
+        this.volume=this.volume-vol;
+    }   
+    setChannel(c){
+        if(c>0 && c<=50)
+        this.channel=c;
+    }
+    reset(){
+        this.volume=50;
+        this.channel=1;
+    }
+    getStatus(){
+        console.log(this.brand,"at channel",this.channel,", volume",this.volume);
+        console.log(this.price,this.inches);
+    }
+}
+class led extends tv{
+    constructor(brand,price,inches,){
+        super(brand,price,inches);
+        this.energyusage=220;
+        this.thickness=60;
+        this.backlight=30;
+    }
+    getstat(){
+        console.log(this.thickness,this.energyusage,this.backlight);
+    }
+}
+class plasma extends tv{
+    constructor(brand,price,inches,){
+        super(brand,price,inches);
+        this.energyusage=110;
+        this.thickness=120;
+        this.backlight=40;
+    }
+    getstat(){
+        console.log(this.thickness,this.energyusage,this.backlight);
+    }
+}
+var l=new led("sony",21000,54);
+var p=new plasma("onida",30000,32);
+l.getStatus();
+l.getstat();
+p.getStatus();
+p.getstat();
