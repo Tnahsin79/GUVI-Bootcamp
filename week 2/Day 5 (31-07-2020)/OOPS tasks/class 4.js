@@ -38,13 +38,13 @@ class atm_transactions{
     function modifies(){}
 }
 
-class currentAccount{
+class currentAccount extends account{
     var accountnumber;
     var balance;
     function withdraw(){}
 }
 
-class currentAccount{
+class savingAccount extends account{
     var accountnumber;
     var balance;
 }
