@@ -7,3 +7,12 @@ var odd = function(d){
     return o;
 };
 console.log(odd(a));
+
+var odd2 = (function(){
+    let i,o=[];
+    for(i=0;i<a.length;i++)
+    if(a[i]%2===1)
+    o.push(a[i]);
+    return o;
+})();
+console.log(odd2);
