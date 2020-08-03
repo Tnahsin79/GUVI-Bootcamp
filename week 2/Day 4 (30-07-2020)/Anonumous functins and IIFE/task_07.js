@@ -14,3 +14,19 @@ var remdup = function(c){
     return c;
 };
 console.log(remdup(a));
+
+var remdup2 = (function(){
+    let i,obj={};
+    for(i=0;i<a.length;i++)
+    {
+        if(obj[a[i]]===undefined)
+        obj[a[i]]=1;
+        else
+        {
+            a.splice(i,1);
+            i--;
+        }
+    }
+    return a;
+})();
+console.log(remdup2);
