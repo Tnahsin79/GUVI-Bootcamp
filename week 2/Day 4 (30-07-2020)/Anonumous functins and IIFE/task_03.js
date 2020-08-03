@@ -6,3 +6,11 @@ var sum = function(d){
     return s;
 };
 console.log(sum(a));
+
+var sum2 = (function(){
+    let i,s=0;
+    for(i=0;i<a.length;i++)
+    s+=a[i];
+    return s;
+})();
+console.log(sum2);
