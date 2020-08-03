@@ -23,3 +23,28 @@ var prime = function(d){
     return a;
 };
 console.log(prime(a));
+
+var prime2 = (function(){
+    let i,d=[],x,f;
+    for(i=0;i<a.length;i++)
+    {
+        if(a[i]===1)
+        a[i]=1;
+        else
+        if(a[i]===2)
+        d.push(a[i]);
+        else
+        {
+            f=0;
+            for(x=2;x<a[i];x++)
+            {
+                if(a[i]%x===0)
+                {f++;break;}
+            }
+            if(f===0)
+            d.push(a[i]);
+        }
+    }
+    return d;
+})();
+console.log(prime2);
