@@ -10,3 +10,15 @@ var remdup = function(c){
     return d;
 };
 console.log(remdup(a));
+
+var remdup2 = (function(){
+    let i,t,d=[];
+    for(i=0;i<a.length;i++)
+    {
+       t=a[i].split("").reverse().join("");
+       if(t===a[i])
+       d.push(a[i]);
+    }
+    return d;
+})();
+console.log(remdup2);
