@@ -10,3 +10,14 @@ var remdup = function(c){
     return c;
 };
 console.log(remdup(a));
+var remdup2 = (function(){
+    let i,t;
+    for(i=0;i<a.length;i++)
+    {
+       t=a[i].split("");
+       t[0]=t[0].toUpperCase();
+       a[i]=t.join("");
+    }
+    return a;
+})();
+console.log(remdup2);
