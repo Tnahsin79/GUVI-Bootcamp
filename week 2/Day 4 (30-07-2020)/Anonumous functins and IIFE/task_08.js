@@ -8,3 +8,14 @@ var remdup = function(c,k){
     return c;
 };
 console.log(remdup(a,3));
+
+var k=3;
+var remdup2 = (function(){
+    let i;
+    for(i=0;i<k;i++)
+    {
+        a.unshift(a.pop());
+    }
+    return a;
+})();
+console.log(remdup2);
