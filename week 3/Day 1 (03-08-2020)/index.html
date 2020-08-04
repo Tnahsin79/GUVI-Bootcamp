@@ -1,0 +1,320 @@
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body bgcolor="#ffffb3">
+       <form onsubmit="sendData()">
+           <table border="1px" style="width: 100%;">
+               <tr>
+                   <td><label>Whether citizen of India: </label>&emsp;
+                   <label for="yes">YES</label><input type="radio" value="yes" id="yes" name="c">&emsp;
+                   <label for="no">NO</label><input type="radio" value="no" id="no" name="c"></td>
+               </tr>
+
+               <tr>
+                <td><label for="pan">Permanent Account Number (PAN): </label>&emsp;
+                <input type="text" id="pan" required autocomplete="off"></td>
+                </tr>
+
+                <tr>
+                <td><label for="pan">1. Name: </label></td>
+                </tr>
+
+                <tr>
+                <td><label>Title: </label>&emsp;
+                <label for="title">Shri/Mr.</label><input type="radio" value="" id="shri" name="title">&emsp;
+                <label for="title">Smt/Mrs.</label><input type="radio" value="" id="smt" name="title">&emsp;
+                <label for="title">kumari/Ms.</label><input type="radio" value="" id="ms" name="title">&emsp;
+                </td>
+                </tr>
+
+                <tr>
+                <td>
+                <label for="ln">Last name: </label><input type="text" id="ln" required autocomplete="off">&emsp;
+                <label for="ln">First name: </label><input type="text" id="fn" required autocomplete="off">&emsp;
+                <label for="ln">middle name: </label><input type="text" id="mn" required autocomplete="off">
+                </td>
+                </tr>
+
+                <tr>
+                <td>
+                <label for="noc">Name as you like to print on card: </label><input type="text" id="noc" required autocomplete="off">
+                </td>
+                </tr>
+
+                <tr>
+                <td><label>Whether mother is single parent and you wish to apply for PAN by furnishing the name of your mother only: </label>&emsp;
+                <label for="yes">YES</label><input type="radio" value="yes" id="yes" name="lang">&emsp;
+                <label for="no">NO</label><input type="radio" value="no" id="no" name="lang"></tr></td>
+                </tr>
+
+                <tr>
+                <td><label>Father's name: </label>
+                </td>
+                </tr>
+    
+                <tr>
+                <td>
+                <label for="ln">Last name: </label><input type="text" id="ln" required autocomplete="off">&emsp;
+                <label for="ln">First name: </label><input type="text" id="fn" required autocomplete="off">&emsp;
+                <label for="ln">middle name: </label><input type="text" id="mn" required autocomplete="off">
+                </td>
+                </tr>
+
+                <tr>
+                <td><label>Mother's name: </label>
+                </td>
+                </tr>
+        
+                <tr>
+                <td>
+                <label for="ln">Last name: </label><input type="text" id="ln" required autocomplete="off">&emsp;
+                <label for="ln">First name: </label><input type="text" id="fn" required autocomplete="off">&emsp;
+                <label for="ln">middle name: </label><input type="text" id="mn" required autocomplete="off">
+                </td>
+                </tr>
+
+                <tr>
+                <td><label>4. Select Parent name which is to be printed on the card: </label>&emsp;
+                <label for="father">Father</label><input type="radio" value="father" id="father" name="lang">&emsp;
+                <label for="mother">Mother</label><input type="radio" value="mother" id="mother" name="lang"></tr></td>
+                </tr>
+
+                <tr>
+                <td><label>5. Date of Birth: </label>&emsp;&emsp;
+                <select name="date" id="date">
+                    <option>dd</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+                <select name="month" id="month">
+                    <option>mm</option>
+                    <option value="january">january</option>
+                    <option value="february">february</option>
+                    <option value="march">march</option>
+                </select>
+                <select name="year" id="year">
+                    <option>yyyy</option>
+                    <option value="1996">1996</option>
+                    <option value="1997">1997</option>
+                    <option value="1998">1998</option>
+                </select>
+                </tr>
+
+                <tr>
+                <td><label>6. Gender: </label>&emsp;
+                <label for="male">Male</label><input type="radio" value="male" id="male" name="gender">&emsp;
+                <label for="female">Female</label><input type="radio" value="female" id="female" name="gender">&emsp;
+                <label for="transgender">Transgender</label><input type="radio" value="transgender" id="transgender" name="gender"></tr></td>
+                </tr>
+                
+                <tr>
+                <td><label>9. Address for Communication: </label>&emsp;
+                <label for="res">Residential</label><input type="radio" value="residential" id="res" name="add">&emsp;
+                <label for="off">Office</label><input type="radio" value="office" id="off" name="add"></tr></td>
+                </tr>
+
+                <tr>
+                <td>
+                <label for="a1">Office Name: </label>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                <input type="text" id="a1" required autocomplete="off">
+                </td>
+                </tr>
+
+                <tr>
+                <td>
+                <label for="a2">Flat/Door/Block No.: </label>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                <input type="text" id="a2" required autocomplete="off">
+                </td>
+                </tr>
+
+                <tr>
+                <td>
+                <label for="a3">Name of Premises/Building/Village: </label><input type="text" id="a3" required autocomplete="off">
+                </td>
+                </tr>
+
+                <tr>
+                <td>
+                <label for="a4">Road/Street/Lane/Post Office: </label>&emsp;&emsp;
+                <input type="text" id="a4" required autocomplete="off">
+                </td>
+                </tr>
+
+                <tr>
+                <td>
+                <label for="a5">Area/Locality/Taluka/Sub-Division: </label><input type="text" id="a5" required autocomplete="off">
+                </td>
+                </tr>
+
+                <tr>
+                <td><label>State/Union Territory: </label>&emsp;&emsp;
+                <select name="date" id="date">
+                    <option>state</option>
+                    <option value="delhi">Delhi</option>
+                    <option value="uttar pradesh">Uttar Pradesh</option>
+                    <option value="rajasthan">Rajasthan</option>
+                </select></td>
+                </tr>
+
+                <tr>
+                <td>
+                <label for="email">Email id: </label>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                <input type="text" id="email" required autocomplete="off">
+                </td>
+                </tr>
+
+                <tr>
+                <td>
+                <label for="aadhaar">12. AADHAAR NUMBER </label>&emsp;&emsp;&emsp;&emsp;&emsp;
+                <input type="text" id="aadhaar" required autocomplete="off" maxlength="12">
+                </td>
+                </tr> 
+                
+                <tr>
+                <td>
+                <label for="gst">13. GSTIN: </label>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                <input type="text" id="gst" required autocomplete="off">
+                </td>
+                </tr>
+
+                <tr>
+                <td>
+                <label for="aadhaar">14.  Mention other Permanent Account Numbers (PANs) if any,inadvertently allotted to you. Submit proof of surrendered PAN(s) along with the application. </label>
+                </td>
+                </tr>
+
+                <tr>
+                <td>
+                <label for="p1">PAN1: </label><input type="text" id="p1" autocomplete="off">&emsp;
+                <label for="p2">PAN2: </label><input type="text" id="p2" autocomplete="off">
+                </td>
+                </tr>
+
+                <tr>
+                <td>
+                <label for="p3">PAN3: </label><input type="text" id="p3" autocomplete="off">&emsp;
+                <label for="p4">PAN4: </label><input type="text" id="p4" autocomplete="off">
+                </td>
+                </tr>
+
+                <tr>
+                <td>
+                <label for="veri">15. Verification </label>
+                </td>
+                </tr> 
+
+                <tr>
+                <td>
+                    I/We <input type="text" id="field" required autocomplete="off">,the applicant,in the capacity of  
+                    <select name="veri" id="veri">
+                        <option>state</option>
+                        <option value="a">a</option>
+                        <option value="b">b</option>
+                    </select>
+                    do hereby declare that what is stated above is true to the best of my information and belief.<br>
+                    I have enclosed <input type="text" id="field" required> (number of documents) in support of proposed changes/corrections.
+                </td>
+                </tr>
+
+                <tr>
+                <td>
+                <label for="place">Place: </label><input type="text" id="place" required autocomplete="off">&emsp;
+                </td>
+                </tr>
+
+                <tr>
+                <td>
+                    I/We have enclosed<br>
+                    <select>
+                        <option>--please select--</option>
+                        <option value="a">a</option>
+                        <option value="b">b</option>
+                    </select>as proof of identity<br>
+                    <select>
+                        <option>--please select--</option>
+                        <option value="a">a</option>
+                        <option value="b">b</option>
+                    </select>as proof of address,<br>
+                    <select>
+                        <option>--please select--</option>
+                        <option value="a">a</option>
+                        <option value="b">b</option>
+                    </select>as proof of date of birth and<br>
+                    <select>
+                        <option>--please select--</option>
+                        <option value="a">a</option>
+                        <option value="b">b</option>
+                    </select>as proof of PAN allotted.
+                </td>
+                </tr>
+
+                <tr>
+                <td><label>Whether you wish to have?  </label>&emsp;
+                <label for="res">Physical PAN Card & e-PAN Card </label><input type="radio" value="1" id="res" name="add">&emsp;
+                <label for="off">Only e-PAN Card </label><input type="radio" value="2" id="off" name="add"></tr></td>
+                </tr>
+
+                <tr>
+                <td><label>For paperless PAN application: </label>&emsp;
+                <label for="yes">YES</label><input type="radio" value="yes" id="yes" name="c">&emsp;
+                <label for="no">NO</label><input type="radio" value="no" id="no" name="c"></tr></td>
+                </tr>
+
+                <tr>
+                <td><label for="photo">Photo upload: </label>&emsp;&emsp;&emsp;
+                <input type="file" id="photo">
+                </td>
+                </tr>
+
+                <tr>
+                <td><label for="sign">Signature upload: </label>&emsp;
+                <input type="file" id="sign">
+                </td>
+                </tr>
+
+                <tr>
+                <td><label for="doc">Document upload: </label>&emsp;
+                <input type="file" multiple id="doc">
+                </td>
+                </tr>
+
+                <tr>
+                <td>
+                <label for="pphoto">ALREADY UPLOADED PHOTO: </label>&emsp;&emsp;&emsp;&emsp;
+                <input type="text" id="pphoto" required autocomplete="off">
+                </td>
+                </tr>
+
+                <tr>
+                <td>
+                <label for="pSIGN">ALREADY UPLOADED SIGNATURE: </label>&emsp;&emsp;
+                <input type="text" id="pSIGN" required autocomplete="off">
+                </td>
+                </tr>
+
+                <tr>
+                <td>
+                <label for="pdoc">ALREADY UPLOADED DOCUMENTS: </label>&emsp;
+                    <textarea name="pdoc" id="pdoc" cols="30" rows="10"></textarea> 
+                </td>
+                </tr>
+                
+                <tr>
+                    <td align="center">
+                        <button type="submit">SUBMIT</button>
+                    </td>
+                </tr>
+
+           </table>
+       </form>
+       
+       <script>
+           function sendData(){
+               alert("DATA RECORDED! thank you.....");
+           }
+       </script>
+
+    </body>
+</html>
