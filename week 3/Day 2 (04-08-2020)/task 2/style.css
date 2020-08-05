@@ -1,1 +1,25 @@
-
+h2{
+    text-align: center;
+}
+#td1{
+    padding: 10px;
+    margin: 10px;
+}
+#td2{
+    padding: 0px;
+    margin: 10px;
+}
+.name{
+    text-align: center;
+    padding-top: 35px;
+    padding-bottom: 35px;
+    margin-top: 0px;
+    background-color: #e9b83f;
+    width: 400px;
+    border-radius: 5px;
+    position: absolute;
+}
+.b1{
+    margin-left: 250px;
+    margin-right: 250px;
+}
