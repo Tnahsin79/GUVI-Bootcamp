@@ -1,0 +1,31 @@
+.outer{
+    justify-content: center;
+    align-items: center;
+}
+#icon {
+    display: inline-block;
+    padding: 9.3px 15px;
+    box-shadow: 1px 2px 5px rgba(0,0,0,.09); 
+    background: #1c87c9;
+    color: #fff;
+    text-align: center;
+}
+input[type=text],.drop,input[type=email]{
+    width: calc(100% - 57px);
+    height: 36px;
+    margin: 13px 0 0 -5px;
+    padding-left: 10px; 
+    border-radius: 0 5px 5px 0;
+    border: solid 1px #cbc9c9; 
+    box-shadow: 1px 2px 5px rgba(0,0,0,.09); 
+    background: #fff; 
+}
+.field{
+    column-span: 8;
+}
+.value{
+    column-span: 4;
+}
+button{
+    margin-left: 350px;
+}
