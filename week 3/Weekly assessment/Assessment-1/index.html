@@ -1,0 +1,91 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Assessment1</title>
+</head>
+<body>
+    <div class="outer">
+    <div style="background-color: #cce6ff; width: 800px; margin-left: 350px;">
+        <div style="padding: 15px;">
+            <form style="width: 100%;" onsubmit="sendData()">
+                <table style="width: inherit;">
+                    <tr>
+                        <td colspan="8" class="field"><label for="name" style="font-size: 20px;">Full name</label></td>
+                        <td colspan="4" class="value"><label id="icon" for="name"><i class="fa">&#xf007;</i></label>
+                            <input type="text" name="name" id="name" placeholder="Full name" required/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="8" class="field"><label for="aline1" style="font-size: 20px;">Address Line 1</label></td>
+                        <td colspan="4" class="value"><label id="icon" for="aline1"><i class="fa">&#xf2ba;</i></label>
+                            <input type="text" name="aline1" id="aline1" placeholder="Address Line 1" required/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="8" class="field"><label for="aline2" style="font-size: 20px;">Address Line 2</label></td>
+                        <td colspan="4" class="value"><label id="icon" for="aline1"><i class="fa">&#xf2ba;</i></label>
+                            <input type="text" name="aline2" id="aline2" placeholder="Address Line 2" required/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="8" class="field"><label for="city" style="font-size: 20px;">City</label></td>
+                        <td colspan="4" class="value"><label id="icon" for="city"><i class="fa">&#xf0f7;</i></label>
+                            <input type="text" name="city" id="city" placeholder="City" required/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="8" class="field"><label for="spr" style="font-size: 20px;">State/Province/Region</label></td>
+                        <td colspan="4" class="value"><label id="icon" for="spr"><i class="fa">&#xf041;</i></label>
+                            <input type="text" name="spr" id="spr" placeholder="State/Province/Region" required/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="8" class="field"><label for="pin" style="font-size: 20px;">Postal Code/ZIP</label></td>
+                        <td colspan="4" class="value"><label id="icon" for="pin"><i class="fa">&#xf2b7;</i></label>
+                            <input type="text" name="pin" id="pin" placeholder="Postal Code/ZIP" required/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="8" class="field"><label for="country" style="font-size: 20px;">Country</label></td>
+                        <td colspan="4" class="value"><label id="icon" for="country"><i class="fa">&#xf278;</i></label>
+                            <select id="country" name="country" class="drop" required>
+                                <option value="india">India</option>
+                                <option value="usa">United States of America</option>
+                                <option value="japan">Japan</option>
+                                <option value="germany">Germany</option>
+                              </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="8" class="field"><label for="email" style="font-size: 20px;">E-mail</label></td>
+                        <td colspan="4" class="value"><label id="icon" for="email"><i class="fa">&#xf007;</i></label>
+                            <input type="email" name="email" id="email" placeholder="E-mail" required/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="8" class="field"><label for="phone" style="font-size: 20px;">Phone Number</label></td>
+                        <td colspan="4" class="value"><label id="icon" for="phone"><i class="fa">&#xf007;</i></label>
+                            <input type="text" name="phone" id="phone" placeholder="Phone Number" required/>
+                        </td>
+                    </tr>
+                </table>
+                <br>
+                <table style="width: inherit;">
+                    <tr style="align-content: center;">
+                        <td><button type="submit">Submit</button></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+    </div>
+    <script>
+        function sendData(){
+            alert("THANK YOU !!!!!!");
+        }
+    </script>
+</body>
+</html>
