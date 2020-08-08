@@ -1,0 +1,96 @@
+.div-1{
+    background-color: #565656;
+    width:800px;
+    margin-left:350px;
+    text-align: center;
+}
+.brin{
+    margin-top: 40px;
+}
+.name{
+    text-align: center;
+    background-color: rgb(199, 182, 84);
+    color: black;
+    border: 1px solid rgb(199, 182, 84);
+    border-radius: 7px;
+    width: fit-content;
+    padding: 10px;
+    margin-left: 280px;
+    margin-top: 0px;
+    position: absolute;
+}
+.div-2{
+    height:30px;
+    background-color:white; 
+    margin-bottom: 0px;
+    margin-left: 250px;
+    margin-right: 250px;
+}
+.div-3{
+    background-color: #565656; 
+    height: 40px;
+    margin-top: 0px;
+    margin-left: 350px;
+    width: 800px;
+}
+.div-4{ 
+    margin-top: 0px;
+    margin-left: 350px;
+    width: 800px; 
+    text-align: center;  
+}
+.address{
+    color:black; 
+    font-size: 15px;
+}
+.div-5{ 
+    margin-top: 0px;
+    margin-left: 350px;
+    width: 800px; 
+    text-align: center;  
+}
+.table1{
+    width: 100%; 
+    background-color: aliceblue;
+    padding: 15px;
+}
+.td1{
+    width: 50%;
+}
+.td2{
+    width: 50%;
+}
+.table2{
+    width: 100%;
+}
+.i1{
+    font-size:24px;
+}
+.profile{
+    text-align: center;
+    display:inline;
+    margin-left: 5px;
+}
+.skills{
+    text-align: center;
+    display:inline;
+    margin-left: 5px;
+}
+.work1{
+    text-align: center;
+    display:inline;
+    margin-left: 5px;
+}
+.work2{
+    text-align: center;
+    display:inline;
+    margin-left: 5px;
+}
+.edu{
+    text-align: center;
+    display:inline;
+    margin-left: 5px;
+}
+.icon{
+    width: 8%;
+}
