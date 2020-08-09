@@ -1,0 +1,30 @@
+.div1{
+    background-color: black;
+    text-align: center;
+}
+.div2{
+    /*background-color: white;*/
+    background-color: black;
+    text-align: center;
+}
+button{
+    width: inherit;
+}
+.row{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#field{
+    width: 600px;
+    margin-top: 20px;
+}
+#exp{
+    width: 600px;
+}
+.display-1{
+    color: white;
+}
+body{
+    background-color: black;
+}
+
