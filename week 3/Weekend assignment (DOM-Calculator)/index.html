@@ -1,0 +1,330 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculator</title>
+</head>
+<body>
+    <script>
+        var num1,l,f;
+
+        var div1=document.createElement("div");
+        div1.setAttribute("class","container div1");
+
+        var h1=document.createElement("h1");
+        h1.setAttribute("class","display-1");
+        h1.innerText="CALCULATOR";
+
+        var exp=document.createElement("input");
+        exp.setAttribute("id","exp");
+        exp.setAttribute("class","exp");
+
+        var field=document.createElement("input");
+        field.setAttribute("id","field");
+        field.setAttribute("class","field");
+        field.setAttribute("autofocus","on");
+
+        var div2=document.createElement("div");
+        div2.setAttribute("class","container div2");
+
+        var r1=document.createElement("div");
+        r1.setAttribute("class","row");
+        var c7=document.createElement("div");
+        c7.setAttribute("class","col-3");
+        var b7=document.createElement("button");
+        b7.setAttribute("class","btn btn-primary");
+        b7.setAttribute("value","7");
+        b7.innerText="7";
+        b7.setAttribute("onclick","click7()");
+        var c8=document.createElement("div");
+        c8.setAttribute("class","col-3");
+        var b8=document.createElement("button");
+        b8.setAttribute("class","btn btn-primary");
+        b8.setAttribute("value","8");
+        b8.innerText="8";
+        b8.setAttribute("onclick","click8()");
+        var c9=document.createElement("div");
+        c9.setAttribute("class","col-3");
+        var b9=document.createElement("button");
+        b9.setAttribute("class","btn btn-primary");
+        b9.setAttribute("value","9");
+        b9.innerText="9";
+        b9.setAttribute("onclick","click9()");
+        var cdiv=document.createElement("div");
+        cdiv.setAttribute("class","col-3");
+        var bdiv=document.createElement("button");
+        bdiv.setAttribute("class","btn btn-primary");
+        bdiv.setAttribute("value","/");
+        bdiv.innerText="/";
+        bdiv.setAttribute("onclick","clickdiv()");
+
+        var r2=document.createElement("div");
+        r2.setAttribute("class","row");
+        var c4=document.createElement("div");
+        c4.setAttribute("class","col-3");
+        var b4=document.createElement("button");
+        b4.setAttribute("class","btn btn-primary");
+        b4.setAttribute("value","4");
+        b4.innerText="4";
+        b4.setAttribute("onclick","click4()");
+        var c5=document.createElement("div");
+        c5.setAttribute("class","col-3");
+        var b5=document.createElement("button");
+        b5.setAttribute("class","btn btn-primary");
+        b5.setAttribute("value","5");
+        b5.innerText="5";
+        b5.setAttribute("onclick","click5()");
+        var c6=document.createElement("div");
+        c6.setAttribute("class","col-3");
+        var b6=document.createElement("button");
+        b6.setAttribute("class","btn btn-primary");
+        b6.setAttribute("value","6");
+        b6.innerText="6";
+        b6.setAttribute("onclick","click6()");
+        var cmul=document.createElement("div");
+        cmul.setAttribute("class","col-3");
+        var bmul=document.createElement("button");
+        bmul.setAttribute("class","btn btn-primary");
+        bmul.setAttribute("value","*");
+        bmul.innerText="*";
+        bmul.setAttribute("onclick","clickmul()");
+
+        var r3=document.createElement("div");
+        r3.setAttribute("class","row");
+        var c1=document.createElement("div");
+        c1.setAttribute("class","col-3");
+        var b1=document.createElement("button");
+        b1.setAttribute("class","btn btn-primary");
+        b1.setAttribute("value","1");
+        b1.innerText="1";
+        b1.setAttribute("onclick","click1()");
+        var c2=document.createElement("div");
+        c2.setAttribute("class","col-3");
+        var b2=document.createElement("button");
+        b2.setAttribute("class","btn btn-primary");
+        b2.setAttribute("value","2");
+        b2.innerText="2";
+        b2.setAttribute("onclick","click2()");
+        var c3=document.createElement("div");
+        c3.setAttribute("class","col-3");
+        var b3=document.createElement("button");
+        b3.setAttribute("class","btn btn-primary");
+        b3.setAttribute("value","3");
+        b3.innerText="3";
+        b3.setAttribute("onclick","click3()");
+        var csub=document.createElement("div");
+        csub.setAttribute("class","col-3");
+        var bsub=document.createElement("button");
+        bsub.setAttribute("class","btn btn-primary");
+        bsub.setAttribute("value","-");
+        bsub.innerText="-";
+        bsub.setAttribute("onclick","clicksub()");
+
+        var r4=document.createElement("div");
+        r4.setAttribute("class","row");
+        var cpoint=document.createElement("div");
+        cpoint.setAttribute("class","col-3");
+        var bpoint=document.createElement("button");
+        bpoint.setAttribute("class","btn btn-primary");
+        bpoint.setAttribute("value",".");
+        bpoint.innerText=".";
+        bpoint.setAttribute("onclick","clickpoint()");
+        var c0=document.createElement("div");
+        c0.setAttribute("class","col-3");
+        var b0=document.createElement("button");
+        b0.setAttribute("class","btn btn-primary");
+        b0.setAttribute("value","0");
+        b0.innerText="0";
+        b0.setAttribute("onclick","click0()");
+        var cequal=document.createElement("div");
+        cequal.setAttribute("class","col-3");
+        var bequal=document.createElement("button");
+        bequal.setAttribute("class","btn btn-primary");
+        bequal.setAttribute("value","=");
+        bequal.innerText="=";
+        bequal.setAttribute("onclick","clickequal()");
+        var cadd=document.createElement("div");
+        cadd.setAttribute("class","col-3");
+        var badd=document.createElement("button");
+        badd.setAttribute("class","btn btn-primary");
+        badd.setAttribute("value","+");
+        badd.innerText="+";
+        badd.setAttribute("onclick","clickadd()");
+
+        var r5=document.createElement("div");
+        r5.setAttribute("class","row");
+        var cclr=document.createElement("div");
+        cclr.setAttribute("class","col-6");
+        var bclr=document.createElement("button");
+        bclr.setAttribute("class","btn btn-primary");
+        bclr.innerText="Clear All";
+        bclr.setAttribute("onclick","clickclear()");
+        var cdel=document.createElement("div");
+        cdel.setAttribute("class","col-6");
+        var bdel=document.createElement("button");
+        bdel.setAttribute("class","btn btn-primary");
+        bdel.innerText="Del";
+        bdel.setAttribute("onclick","clickdel()");
+        
+
+        div1.append(h1);
+        div1.append(exp);
+        div1.append(field);
+        div1.append(div2);
+
+        div2.append(r1);
+        r1.append(c7);
+        c7.append(b7);
+        r1.append(c8);
+        c8.append(b8);
+        r1.append(c9);
+        c9.append(b9);
+        r1.append(cdiv);
+        cdiv.append(bdiv);
+
+        div2.append(r2);
+        r2.append(c4);
+        c4.append(b4);
+        r2.append(c5);
+        c5.append(b5);
+        r2.append(c6);
+        c6.append(b6);
+        r2.append(cmul);
+        cmul.append(bmul);
+
+        div2.append(r3);
+        r3.append(c1);
+        c1.append(b1);
+        r3.append(c2);
+        c2.append(b2);
+        r3.append(c3);
+        c3.append(b3);
+        r3.append(csub);
+        csub.append(bsub);
+
+        div2.append(r4);
+        r4.append(cpoint);
+        cpoint.append(bpoint);
+        r4.append(c0);
+        c0.append(b0);
+        r4.append(cequal);
+        cequal.append(bequal);
+        r4.append(cadd);
+        cadd.append(badd);
+
+        div2.append(r5);
+        r5.append(cclr);
+        cclr.append(bclr);
+        r5.append(cdel);
+        cdel.append(bdel);
+    
+        document.body.append(div1);
+        
+        function click1(){
+            document.getElementById("field").value = document.getElementById("field").value+"1";
+        }
+        function click2(){
+            document.getElementById("field").value = document.getElementById("field").value+"2";
+        }
+        function click3(){
+            document.getElementById("field").value = document.getElementById("field").value+"3";
+        }
+        function click4(){
+            document.getElementById("field").value = document.getElementById("field").value+"4";
+        }
+        function click5(){
+            document.getElementById("field").value = document.getElementById("field").value+"5";
+        }
+        function click6(){
+            document.getElementById("field").value = document.getElementById("field").value+"6";
+        }
+        function click7(){
+            document.getElementById("field").value = document.getElementById("field").value+"7";
+        }
+        function click8(){
+            document.getElementById("field").value = document.getElementById("field").value+"8";
+        }
+        function click9(){
+            document.getElementById("field").value = document.getElementById("field").value+"9";
+        }
+        function clickpoint(){
+            document.getElementById("field").value = document.getElementById("field").value+".";
+        }
+        function click0(){
+            document.getElementById("field").value = document.getElementById("field").value+"0";
+        }
+        function clickequal(){
+            document.getElementById("exp").value = document.getElementById("exp").value+parseInt(document.getElementById("field").value);
+            document.getElementById("field").value = eval(document.getElementById("exp").value);
+        }
+        function clickdiv(){
+            f=4;
+            num1=parseInt(document.getElementById("field").value);
+            document.getElementById("exp").value = document.getElementById("exp").value+num1+"/";
+            document.getElementById("field").value = "";
+        }
+        function clickmul(){
+            f=3;
+            num1=parseInt(document.getElementById("field").value);
+            document.getElementById("exp").value = document.getElementById("exp").value+num1+"*";
+            document.getElementById("field").value = "";
+        }
+        function clicksub(){
+            f=2;
+            num1=parseInt(document.getElementById("field").value);
+            document.getElementById("exp").value = document.getElementById("exp").value+num1+"-";
+            document.getElementById("field").value = "";
+        }
+        function clickadd(){
+            f=1;
+            num1=parseInt(document.getElementById("field").value);
+            document.getElementById("exp").value = document.getElementById("exp").value+num1+"+";
+            document.getElementById("field").value = "";
+        }
+        function clickclear(){
+            document.getElementById("field").value = "";
+            document.getElementById("exp").value = "";
+        }
+        function clickdel(){
+            l=document.getElementById("field").value.split("");
+            l.pop();
+            l=l.join("");
+            //document.getElementById("field").value.charAt(l-1) ="";
+            document.getElementById("field").value=l;
+        }
+
+
+        function numbersOnly(event) {
+            if(event.key==='/')
+            clickdiv();
+            if(event.key==='*')
+            clickmul();
+            if(event.key==='-')
+            clicksub();
+            if(event.key==='+')
+            clickadd();
+            if(event.key==='Enter')
+            clickequal();
+            if(event.key==='Backspace')
+            clickdel();
+        return event.charCode === 0 || /\d/.test(String.fromCharCode(event.charCode));
+        }
+        const input = document.querySelector('input.field');
+        input.onkeypress = numbersOnly;
+        // Prevent pasting (since pasted content might include non-number characters)
+        input.onpaste = event => false;
+
+
+    </script>
+    
+    
+
+<!-- JS, Popper.js, and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</body>
+</html>
