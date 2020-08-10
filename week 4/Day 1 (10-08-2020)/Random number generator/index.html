@@ -1,1 +1,94 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Number Generator</title>
+</head>
+<body>
+    <script>
 
+        var div1=document.createElement("div");
+        div1.setAttribute("class","container div1");
+
+        var h1=document.createElement("h1");
+        h1.setAttribute("class","display-1");
+        h1.innerText="8 DIGIT NUMBER GENERATOR ";
+
+        var btn=document.createElement("button");
+        btn.setAttribute("id","btn");
+        btn.setAttribute("class","btn btn-success");
+        btn.innerText="Generate number";
+        btn.setAttribute("onclick","generate()");
+
+        var atr=document.createElement("button");
+        atr.setAttribute("id","atr");
+        atr.setAttribute("class","btn btn-success");
+        atr.innerText="Generate another number";
+        atr.setAttribute("onclick","another()");
+
+        var rst=document.createElement("button");
+        rst.setAttribute("id","rst");
+        rst.setAttribute("class","btn btn-primary");
+        rst.innerText="RESET";
+        rst.setAttribute("onclick","reset()");
+
+        var field=document.createElement("div");
+        field.setAttribute("id","num");
+        field.setAttribute("class","num");
+        var p=document.createElement("p");
+        p.setAttribute("class","p display-4");
+        p.setAttribute("id","p");
+        p.innerText="00000000"
+
+        div1.append(h1);
+        div1.append(btn);
+        div1.append(field);
+        field.append(p);
+        div1.append(atr);
+        div1.append(rst);
+    
+        document.body.append(div1);
+        
+        var number=0,a=[0,1,2,3,4,5,6,7,8,9];
+        function generate(){
+            var c,i,j,l;
+            document.getElementById("btn").onclick=null;
+            l=a.length-1;
+            c=a[Math.ceil(Math.random()*l)];
+            i=a.indexOf(c);
+            a.splice(i,1);
+            number=(number*10)+c;
+            console.log(number);
+            document.getElementById("p").innerText=number;
+            if(number<=9999999)
+            generate();
+        }
+
+        function reset(){
+            number=0;
+            a=[0,1,2,3,4,5,6,7,8,9];
+            document.getElementById("p").innerText='00000000';
+            document.getElementById("btn").onclick=generate;
+        }
+
+        function another(){
+            number=0;
+            a=[0,1,2,3,4,5,6,7,8,9];
+            //document.getElementById("p").innerText='00000000';
+            generate();
+        }
+        
+
+    </script>
+    
+    
+
+<!-- JS, Popper.js, and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</body>
+</html>
