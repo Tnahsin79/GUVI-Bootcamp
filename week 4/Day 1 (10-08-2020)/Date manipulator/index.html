@@ -1,1 +1,117 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Date Manipulator</title>
+</head>
+<body>
+    <script>
 
+        var div1=document.createElement("div");
+        div1.setAttribute("class","container div1");
+
+        var h1=document.createElement("h1");
+        h1.setAttribute("class","display-1");
+        h1.innerText="DATE MANIPULATOR";
+
+        var date=document.createElement("input");
+        date.setAttribute("type","date");
+        date.setAttribute("class","date");
+        date.setAttribute("id","date");
+
+        var btn=document.createElement("button");
+        btn.setAttribute("id","btn");
+        btn.setAttribute("class","btn btn-success");
+        btn.innerText="Start";
+        btn.setAttribute("onclick","manipulate()");
+
+        var field1=document.createElement("div");
+        field1.setAttribute("id","num1");
+        field1.setAttribute("class","num container");
+        field1.innerText=" Years : Months : Days ";
+        var p1=document.createElement("p");
+        p1.setAttribute("class","p1 display-4");
+        p1.setAttribute("id","p1");
+
+        var field2=document.createElement("div");
+        field2.setAttribute("id","num2");
+        field2.setAttribute("class","num container");
+        field2.innerText=" Hours  :  Minutes :  Seconds :  Milliseconds ";
+        var p2=document.createElement("p");
+        p2.setAttribute("class","p2 display-4");
+        p2.setAttribute("id","p2");
+
+        div1.append(h1);
+        div1.append(date);
+        div1.append(btn);
+        div1.append(field1);
+        field1.append(p1);
+        div1.append(field2);
+        field2.append(p2);
+    
+        document.body.append(div1);
+        
+        function manipulate(){
+
+            var d1,d2,m1,m2,y1,y2;
+            const oneDay = 24 * 60 * 60 * 1000;
+            var date1 = document.getElementById("date").value;
+            date1=date1.split("-");
+            y1=+date1[0];
+            m1=+date1[1];
+            d1=+date1[2];
+            console.log(d1,m1,y1);
+
+            var today = new Date();
+            d2=today.getDate();
+            m2=(today.getMonth()+1);
+            y2=today.getFullYear();
+            console.log(d2,m2,y2);
+            
+            date1=new Date(y1,m1,d1);
+            date2=new Date(y2,m2,d2);
+            var diffDays = Math.round(Math.abs((date1-date2)/oneDay));
+            
+            var diffYears = parseInt(diffDays/365.25);
+            
+            diffDays = diffDays-(diffYears*365.25);
+            
+            var diffMonths = parseInt(diffDays/30.5);
+            diffDays = diffDays-(diffMonths*30.5);
+
+            today = diffYears +" : "+ diffMonths+" : "+ diffDays;
+            document.getElementById("p1").innerText=today;
+
+            setInterval(function(){
+            //var d=new Date();
+            var today=new Date();
+            var time = today.getHours() +" : "+ today.getMinutes() +" : "+ today.getSeconds()+" : "+ today.getMilliseconds();
+            //document.getElementById("p2").innerText=d.toLocaleTimeString();
+            document.getElementById("p2").innerText=time;
+            },100);
+        }    
+
+        setInterval(manipulate,86400000);
+
+        /*setInterval(function(){
+            //var d=new Date();
+            var today=new Date();
+            var time = today.getHours() +" : "+ today.getMinutes() +" : "+ today.getSeconds()+" : "+ today.getMilliseconds();
+            //document.getElementById("p2").innerText=d.toLocaleTimeString();
+            document.getElementById("p2").innerText=time;
+        },100);*/
+
+
+    </script>
+    
+    
+
+<!-- JS, Popper.js, and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</body>
+</html>
