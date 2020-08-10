@@ -1,1 +1,36 @@
-
+.div1{
+    background-color: black;
+    text-align: center;
+}
+button{
+    width: inherit;
+}
+#num1{
+    color: aliceblue;
+    width: 600px;
+    margin-top: 20px;
+}
+#num2{
+    color: aliceblue;
+    width: 600px;
+    margin-top: 20px;
+}
+#date{
+    width: 600px;
+    margin-bottom: 15px;
+}
+#btn{
+    width: 600px;
+}
+.display-1{
+    color: white;
+}
+body{
+    background-color: black;
+}
+#p1{
+    color: aliceblue;
+}
+#p2{
+    color: aliceblue;
+}
