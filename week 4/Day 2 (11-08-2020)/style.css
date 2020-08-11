@@ -3,7 +3,7 @@
     text-align: center;
     color: black;
 }
-button{
+button,.btn{
     width: 300px;
     margin-top: 15px;
 }
