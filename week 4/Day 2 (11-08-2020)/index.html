@@ -1,0 +1,428 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>DOM Form</title>
+</head>
+<body>
+    <div class="row"></div>
+    <div class="col"></div>
+    <script>
+
+        var div1=document.createElement("div");
+        div1.setAttribute("class","container div1");
+
+        var h1=document.createElement("h1");
+        h1.setAttribute("class","display-1");
+        h1.innerText="DOM FORM";
+
+        var div2=document.createElement("div");
+        div2.setAttribute("class","container div2");
+
+        var form=document.createElement("form");
+        form.setAttribute("onclick","submit()");
+
+        var r1=document.createElement("div");
+        r1.setAttribute("class","row r1");
+        r1.setAttribute("id","r1");
+        var c11=document.createElement("div");
+        c11.setAttribute("class","col-12 col-md-6 c11");
+        c11.setAttribute("id","c11");
+        var l1=document.createElement("label");
+        l1.innerText="First Name : ";
+        var c12=document.createElement("div");
+        c12.setAttribute("class","col-12 col-md-6 c12");
+        c12.setAttribute("id","c12");
+        var i1=document.createElement("input");
+        i1.setAttribute("type","text");
+        i1.setAttribute("placeholder","First Name")
+        i1.setAttribute("id","fname");
+        i1.setAttribute("required","on");
+
+        var r2=document.createElement("div");
+        r2.setAttribute("class","row r2");
+        r2.setAttribute("id","r2");
+        var c21=document.createElement("div");
+        c21.setAttribute("class","col-12 col-md-6 c21");
+        c21.setAttribute("id","c21");
+        var l2=document.createElement("label");
+        l2.innerText="Last Name : ";
+        var c22=document.createElement("div");
+        c22.setAttribute("class","col-12 col-md-6 c22");
+        c22.setAttribute("id","c22");
+        var i2=document.createElement("input");
+        i2.setAttribute("placeholder","Last Name")
+        i2.setAttribute("type","text");
+        i2.setAttribute("id","lname");
+        i2.setAttribute("required","on");
+
+        var r3=document.createElement("div");
+        r3.setAttribute("class","row r3");
+        r3.setAttribute("id","r3");
+        var c31=document.createElement("div");
+        c31.setAttribute("class","col-12 col-md-6 c31");
+        c31.setAttribute("id","c31");
+        var l3=document.createElement("label");
+        l3.innerText="Address line 1 : ";
+        var c32=document.createElement("div");
+        c32.setAttribute("class","col-12 col-md-6 c32");
+        c32.setAttribute("id","c32");
+        var i3=document.createElement("input");
+        i3.setAttribute("placeholder","Address line 1")
+        i3.setAttribute("type","text");
+        i3.setAttribute("id","add1");
+        i3.setAttribute("required","on");
+
+        var r4=document.createElement("div");
+        r4.setAttribute("class","row r4");
+        r4.setAttribute("id","r4");
+        var c41=document.createElement("div");
+        c41.setAttribute("class","col-12 col-md-6 c41");
+        c41.setAttribute("id","c31");
+        var l4=document.createElement("label");
+        l4.innerText="Address line 2 : ";
+        var c42=document.createElement("div");
+        c42.setAttribute("class","col-12 col-md-6 c42");
+        c42.setAttribute("id","c42");
+        var i4=document.createElement("input");
+        i4.setAttribute("placeholder","Address line 2")
+        i4.setAttribute("type","text");
+        i4.setAttribute("id","add2");
+        i4.setAttribute("required","on");
+
+        var r5=document.createElement("div");
+        r5.setAttribute("class","row r5");
+        r5.setAttribute("id","r5");
+        var c51=document.createElement("div");
+        c51.setAttribute("class","col-12 col-md-6 c51");
+        c51.setAttribute("id","c51");
+        var l5=document.createElement("label");
+        l5.innerText="City : ";
+        var c52=document.createElement("div");
+        c52.setAttribute("class","col-12 col-md-6 c52");
+        c52.setAttribute("id","c52");
+        var i5=document.createElement("input");
+        i5.setAttribute("placeholder","City")
+        i5.setAttribute("type","text");
+        i5.setAttribute("id","city");
+        i5.setAttribute("required","on");
+
+        var r6=document.createElement("div");
+        r6.setAttribute("class","row r6");
+        r6.setAttribute("id","r6");
+        var c61=document.createElement("div");
+        c61.setAttribute("class","col-12 col-md-6 c61");
+        c61.setAttribute("id","c61");
+        var l6=document.createElement("label");
+        l6.innerText="Pin Code : ";
+        var c62=document.createElement("div");
+        c62.setAttribute("class","col-12 col-md-6 c62");
+        c62.setAttribute("id","c62");
+        var i6=document.createElement("input");
+        i6.setAttribute("placeholder","Pin Code")
+        i6.setAttribute("type","text");
+        i6.setAttribute("id","pin");
+        i6.setAttribute("required","on");
+
+        var r7=document.createElement("div");
+        r7.setAttribute("class","row r7");
+        r7.setAttribute("id","r7");
+        var c71=document.createElement("div");
+        c71.setAttribute("class","col-12 col-md-6 c71");
+        c71.setAttribute("id","c71");
+        var l7=document.createElement("label");
+        l7.innerText="Country : ";
+        var c72=document.createElement("div");
+        c72.setAttribute("class","col-12 col-md-6 c72");
+        c72.setAttribute("id","c72");
+        var i7=document.createElement("input");
+        i7.setAttribute("placeholder","Country")
+        i7.setAttribute("type","text");
+        i7.setAttribute("id","country");
+        i7.setAttribute("required","on");
+
+        var r8=document.createElement("div");
+        r8.setAttribute("class","row r8");
+        r8.setAttribute("id","r8");
+        var c81=document.createElement("div");
+        c81.setAttribute("class","col-12 col-md-6 c81");
+        c81.setAttribute("id","c81");
+        var l8=document.createElement("p");
+        l8.innerText="Gender : ";
+        /**/
+        var c82=document.createElement("div");
+        c82.setAttribute("class","col-12 col-md-3 c82");
+        c82.setAttribute("id","c82");
+        var i8=document.createElement("input");
+        i8.setAttribute("type","radio");
+        i8.setAttribute("value","Male")
+        i8.setAttribute("id","male");
+        i8.setAttribute("name","gender");
+        var l81=document.createElement("label");
+        l81.innerText="Male";
+        l81.setAttribute("for","male");
+        /**/
+        var br=document.createElement("br");
+        /*
+        var c83=document.createElement("div");
+        c83.setAttribute("class","col-12 col-md-3 c83");
+        c83.setAttribute("id","c83");*/
+        var i9=document.createElement("input");
+        i9.setAttribute("value","Female")
+        i9.setAttribute("type","radio");
+        i9.setAttribute("id","female");
+        i9.setAttribute("name","gender");
+        var l82=document.createElement("label");
+        l82.innerText="Female";
+        l82.setAttribute("for","female");
+
+        var r9=document.createElement("div");
+        r9.setAttribute("class","row r9");
+        r9.setAttribute("id","r9");
+        var c91=document.createElement("div");
+        c91.setAttribute("class","col-12 col-md-6 c91");
+        c91.setAttribute("id","c91");
+        var l9=document.createElement("label");
+        l9.innerText="Choice of food : ";
+        var c92=document.createElement("div");
+        c92.setAttribute("class","col-12 col-md-6 c92");
+        c92.setAttribute("id","c92");
+        var i10=document.createElement("select");
+        i10.setAttribute("id","food1");
+        i10.setAttribute("required","on");
+        var opt1=document.createElement("option");
+        opt1.setAttribute("value","");
+        opt1.innerText="----SELECT----";
+        var opt2=document.createElement("option");
+        opt2.setAttribute("value","indian");
+        opt2.innerText="Indian";
+        var opt3=document.createElement("option");
+        opt3.setAttribute("value","american");
+        opt3.innerText="American";
+        var opt4=document.createElement("option");
+        opt4.setAttribute("value","mexican");
+        opt4.innerText="Mexican";
+        var opt5=document.createElement("option");
+        opt5.setAttribute("value","italian");
+        opt5.innerText="Italian";
+        var opt6=document.createElement("option");
+        opt6.setAttribute("value","japanese");
+        opt6.innerText="Japanese";
+        /**/
+        var i11=document.createElement("select");
+        i11.setAttribute("id","food2");
+        i11.setAttribute("required","on");
+        var opt7=document.createElement("option");
+        opt7.setAttribute("value","");
+        opt7.innerText="----SELECT----";
+        var opt8=document.createElement("option");
+        opt8.setAttribute("value","indian");
+        opt8.innerText="Indian";
+        var opt9=document.createElement("option");
+        opt9.setAttribute("value","american");
+        opt9.innerText="American";
+        var opt10=document.createElement("option");
+        opt10.setAttribute("value","mexican");
+        opt10.innerText="Mexican";
+        var opt11=document.createElement("option");
+        opt11.setAttribute("value","italian");
+        opt11.innerText="Italian";
+        var opt12=document.createElement("option");
+        opt12.setAttribute("value","japanese");
+        opt12.innerText="Japanese";
+
+
+        var table=document.createElement("table");
+        table.setAttribute("width","100%");
+        var tr=document.createElement("tr");
+        var colfname=document.createElement("th");
+        colfname.innerText="First Name";
+        var collname=document.createElement("th");
+        collname.innerText="Last Name";
+        var coladd1=document.createElement("th");
+        coladd1.innerText="Address 1";
+        var coladd2=document.createElement("th");
+        coladd2.innerText="Address 2";
+        var colcity=document.createElement("th");
+        colcity.innerText="City";
+        var colpin=document.createElement("th");
+        colpin.innerText="Pin Code";
+        var colcount=document.createElement("th");
+        colcount.innerText="Country";
+        var colgen=document.createElement("th");
+        colgen.innerText="Gender";
+        var colch1=document.createElement("th");
+        colch1.innerText="Choice 1";
+        var colch2=document.createElement("th");
+        colch2.innerText="Choice 2";
+        /**/
+        var data=document.createElement("tr");
+        var data1=document.createElement("td");
+        data1.setAttribute("id","data1");
+        var data2=document.createElement("td");
+        data2.setAttribute("id","data2");
+        var data3=document.createElement("td");
+        data3.setAttribute("id","data3");
+        var data4=document.createElement("td");
+        data4.setAttribute("id","data4");
+        var data5=document.createElement("td");
+        data5.setAttribute("id","data5");
+        var data6=document.createElement("td");
+        data6.setAttribute("id","data6");
+        var data7=document.createElement("td");
+        data7.setAttribute("id","data7");
+        var data8=document.createElement("td");
+        data8.setAttribute("id","data8");
+        var data9=document.createElement("td");
+        data9.setAttribute("id","data9");
+        var data10=document.createElement("td");
+        data10.setAttribute("id","data10");
+
+        var r10=document.createElement("div")
+        r10.setAttribute("class","row r10");
+        r10.setAttribute("id","r10");
+        var c10=document.createElement("col");
+        c10.setAttribute("class","col-12 c10");
+        c10.setAttribute("id","c10");
+        var btn=document.createElement("button");
+        btn.setAttribute("onclick","submit();");
+        btn.setAttribute("class","btn btn-success");
+        btn.innerText="SUBMIT";
+
+
+        div1.append(h1);
+        div1.append(div2);
+        div2.append(form);
+
+        form.append(r1);
+        r1.append(c11);
+        c11.append(l1);
+        r1.append(c12);
+        c12.append(i1);
+
+        form.append(r2);
+        r2.append(c21);
+        c21.append(l2);
+        r2.append(c22);
+        c22.append(i2);
+
+        form.append(r3);
+        r3.append(c31);
+        c31.append(l3);
+        r3.append(c32);
+        c32.append(i3);
+
+        form.append(r4);
+        r4.append(c41);
+        c41.append(l4);
+        r4.append(c42);
+        c42.append(i4);
+
+        form.append(r5);
+        r5.append(c51);
+        c51.append(l5);
+        r5.append(c52);
+        c52.append(i5);
+
+        form.append(r6);
+        r6.append(c61);
+        c61.append(l6);
+        r6.append(c62);
+        c62.append(i6);
+
+        form.append(r7);
+        r7.append(c71);
+        c71.append(l7);
+        r7.append(c72);
+        c72.append(i7);
+
+        form.append(r8);
+        r8.append(c81);
+        c81.append(l8);
+        r8.append(c82);
+        c82.append(i8);
+        c82.append(l81);
+        c82.append(br);
+        c82.append(i9);
+        c82.append(l82);
+
+        //r8.append(c83);
+        //c83.append(i9);
+        //c83.append(l82);
+
+        form.append(r9);
+        r9.append(c91);
+        c91.append(l9);
+        r9.append(c92);
+        c92.append(i10);
+        i10.append(opt1);
+        i10.append(opt2);
+        i10.append(opt3);
+        i10.append(opt4);
+        i10.append(opt5);
+        i10.append(opt6);
+        c92.append(i11);
+        i11.append(opt7);
+        i11.append(opt8);
+        i11.append(opt9);
+        i11.append(opt10);
+        i11.append(opt11);
+        i11.append(opt12);
+
+        div2.append(table);
+        table.append(tr);
+        tr.append(colfname);
+        tr.append(collname);
+        tr.append(coladd1);
+        tr.append(coladd2);
+        tr.append(colcity);
+        tr.append(colpin);
+        tr.append(colcount);
+        tr.append(colgen);
+        tr.append(colch1);
+        tr.append(colch2);
+        table.append(data);
+        data.append(data1);
+        data.append(data2);
+        data.append(data3);
+        data.append(data4);
+        data.append(data5);
+        data.append(data6);
+        data.append(data7);
+        data.append(data8);
+        data.append(data9);
+        data.append(data10);
+
+        form.append(r10);
+        r10.append(c10);
+        c10.append(btn);
+    
+        document.body.append(div1);
+
+        function submit(){
+            data1.innerText=document.getElementById("fname").value;
+            data2.innerText=document.getElementById("lname").value;
+            data3.innerText=document.getElementById("add1").value;
+            data4.innerText=document.getElementById("add2").value;
+            data5.innerText=document.getElementById("city").value;
+            data6.innerText=document.getElementById("pin").value;
+            data7.innerText=document.getElementById("country").value;
+            data8.innerText=document.getElementById("gender").value;
+            data9.innerText=document.getElementById("food1").value;
+            data10.innerText=document.getElementById("food2").value;
+        }
+        
+
+    </script>
+    
+    
+
+<!-- JS, Popper.js, and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</body>
+</html>
