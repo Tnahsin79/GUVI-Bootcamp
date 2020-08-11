@@ -1,0 +1,37 @@
+.div1,body{
+    background-color: lightblue;
+    text-align: center;
+    color: black;
+}
+button{
+    width: 300px;
+    margin-top: 15px;
+}
+.div2{
+    color: black;
+    margin-top: 20px;
+}
+.display-1{
+    color: black;
+}
+body{
+    background-color: black;
+}
+label,p,th{
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+}
+input,select{
+    width: 400px;
+}
+table{
+    border: 1px solid black;
+    text-align: center;
+}
+th,td{
+    border: 1px solid black;
+    text-align: center;
+    width: fit-content;
+}
+
