@@ -8,8 +8,6 @@
     <title>DOM Form</title>
 </head>
 <body>
-    <div class="row"></div>
-    <div class="col"></div>
     <script>
 
         var div1=document.createElement("div");
@@ -23,7 +21,7 @@
         div2.setAttribute("class","container div2");
 
         var form=document.createElement("form");
-        form.setAttribute("onclick","submit()");
+        //form.setAttribute("onsubmit","getData()");
 
         var r1=document.createElement("div");
         r1.setAttribute("class","row r1");
@@ -285,12 +283,22 @@
         r10.setAttribute("class","row r10");
         r10.setAttribute("id","r10");
         var c10=document.createElement("col");
-        c10.setAttribute("class","col-12 c10");
+        c10.setAttribute("class","col-12 col-md-6 c10");
         c10.setAttribute("id","c10");
-        var btn=document.createElement("button");
-        btn.setAttribute("onclick","submit();");
+        var btn=document.createElement("input");
+        btn.setAttribute("type","button");
+        btn.setAttribute("onclick","getData();");
         btn.setAttribute("class","btn btn-success");
-        btn.innerText="SUBMIT";
+        btn.setAttribute("value","SUBMIT");
+        //btn.innerText="SUBMIT";
+        var crst=document.createElement("col");
+        crst.setAttribute("class","col-12 col-md-6 c10");
+        crst.setAttribute("id","crst");
+        var rst=document.createElement("input");
+        rst.setAttribute("type","reset");
+        //rst.setAttribute("onclick","getData();");
+        rst.setAttribute("class","btn btn-danger");
+        rst.setAttribute("value","RESET");
 
 
         div1.append(h1);
@@ -399,20 +407,29 @@
         form.append(r10);
         r10.append(c10);
         c10.append(btn);
+        r10.append(crst);
+        crst.append(rst);
     
         document.body.append(div1);
 
-        function submit(){
-            data1.innerText=document.getElementById("fname").value;
-            data2.innerText=document.getElementById("lname").value;
-            data3.innerText=document.getElementById("add1").value;
-            data4.innerText=document.getElementById("add2").value;
-            data5.innerText=document.getElementById("city").value;
-            data6.innerText=document.getElementById("pin").value;
-            data7.innerText=document.getElementById("country").value;
-            data8.innerText=document.getElementById("gender").value;
-            data9.innerText=document.getElementById("food1").value;
-            data10.innerText=document.getElementById("food2").value;
+        function getData(){
+            document.getElementById("data1").innerHTML=document.getElementById("fname").value;
+            document.getElementById("data2").innerHTML=document.getElementById("lname").value;
+            document.getElementById("data3").innerHTML=document.getElementById("add1").value;
+            document.getElementById("data4").innerHTML=document.getElementById("add2").value;
+            document.getElementById("data5").innerHTML=document.getElementById("city").value;
+            document.getElementById("data6").innerHTML=document.getElementById("pin").value;
+            document.getElementById("data7").innerHTML=document.getElementById("country").value;
+            if (document.getElementById("male").checked) {
+                document.getElementById("data8").innerHTML=document.getElementById("male").value;
+            }
+            else
+            {
+                document.getElementById("data8").innerHTML=document.getElementById("female").value;
+            }
+            //document.getElementById("data8").innerText=document.getElementById("gender").value;
+            document.getElementById("data9").innerHTML=document.getElementById("food1").value;
+            document.getElementById("data10").innerHTML=document.getElementById("food2").value;
         }
         
 
