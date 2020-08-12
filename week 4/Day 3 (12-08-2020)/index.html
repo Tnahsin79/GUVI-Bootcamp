@@ -1,0 +1,251 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Pagination</title>
+</head>
+<body>
+    
+    <script src="data.js"></script>
+    <script>
+        var detail=data;
+        console.log(detail);
+
+        var div1=document.createElement("div");
+        div1.setAttribute("class","container div1");
+
+        var h1=document.createElement("h1");
+        h1.setAttribute("class","display-1");
+        h1.innerText="PAGINATION";
+
+        var table=document.createElement("table");
+        table.setAttribute("width","100%");
+        var thead=document.createElement("thead");
+        var tr=document.createElement("tr");
+        var th1=document.createElement("th");
+        th1.innerText="ID";
+        var th2=document.createElement("th");
+        th2.innerText="NAME";
+        var th3=document.createElement("th");
+        th3.innerText="E-MAIL";
+        var tbody=document.createElement("tbody");
+
+        createtable();
+
+        div1.append(h1);
+        div1.append(table);
+        table.appendChild(thead);
+        thead.append(tr);
+        tr.append(th1);
+        tr.append(th2);
+        tr.append(th3);
+        table.appendChild(tbody);
+
+        var div2=document.createElement("div");
+        div2.setAttribute("class","row div2");
+        var col1=document.createElement("div");
+        col1.setAttribute("class","col-1");
+        var btn1=document.createElement("button");
+        btn1.setAttribute("class","btn btn-success");
+        btn1.innerText="Prev";
+        btn1.setAttribute("onclick","onclickprev()");
+
+        var col2=document.createElement("div");
+        col2.setAttribute("class","col-1");
+        var btn2=document.createElement("button");
+        btn2.setAttribute("class","btn btn-success");
+        btn2.innerText="1";
+        btn2.setAttribute("onclick","onclick1()");
+
+        var col3=document.createElement("div");
+        col3.setAttribute("class","col-1");
+        var btn3=document.createElement("button");
+        btn3.setAttribute("class","btn btn-success");
+        btn3.innerText="2";
+        btn3.setAttribute("onclick","onclick2()");
+
+        var col4=document.createElement("div");
+        col4.setAttribute("class","col-1");
+        var btn4=document.createElement("button");
+        btn4.setAttribute("class","btn btn-success");
+        btn4.innerText="3";
+        btn4.setAttribute("onclick","onclick3()");
+
+        var col5=document.createElement("div");
+        col5.setAttribute("class","col-1");
+        var btn5=document.createElement("button");
+        btn5.setAttribute("class","btn btn-success");
+        btn5.innerText="4";
+        btn5.setAttribute("onclick","onclick4()");
+
+        var col6=document.createElement("div");
+        col6.setAttribute("class","col-1");
+        var btn6=document.createElement("button");
+        btn6.setAttribute("class","btn btn-success");
+        btn6.innerText="5";
+        btn6.setAttribute("onclick","onclick5()");
+
+        var col7=document.createElement("div");
+        col7.setAttribute("class","col-1");
+        var btn7=document.createElement("button");
+        btn7.setAttribute("class","btn btn-success");
+        btn7.innerText="6";
+        btn7.setAttribute("onclick","onclick6()");
+
+        var col8=document.createElement("div");
+        col8.setAttribute("class","col-1");
+        var btn8=document.createElement("button");
+        btn8.setAttribute("class","btn btn-success");
+        btn8.innerText="7";
+        btn8.setAttribute("onclick","onclick7()");
+
+        var col9=document.createElement("div");
+        col9.setAttribute("class","col-1");
+        var btn9=document.createElement("button");
+        btn9.setAttribute("class","btn btn-success");
+        btn9.innerText="8";
+        btn9.setAttribute("onclick","onclick8()");
+
+        var col10=document.createElement("div");
+        col10.setAttribute("class","col-1");
+        var btn10=document.createElement("button");
+        btn10.setAttribute("class","btn btn-success");
+        btn10.innerText="9";
+        btn10.setAttribute("onclick","onclick9()");
+
+        var col11=document.createElement("div");
+        col11.setAttribute("class","col-1");
+        var btn11=document.createElement("button");
+        btn11.setAttribute("class","btn btn-success");
+        btn11.innerText="10";
+        btn11.setAttribute("onclick","onclick10()");
+
+        var col12=document.createElement("div");
+        col12.setAttribute("class","col-1");
+        var btn12=document.createElement("button");
+        btn12.setAttribute("class","btn btn-success");
+        btn12.innerText="Next";
+        btn12.setAttribute("onclick","onclicknext()");
+
+        div1.append(div2);
+        div2.appendChild(col1);
+        col1.appendChild(btn1);
+        div2.appendChild(col2);
+        col2.appendChild(btn2);
+        div2.appendChild(col3);
+        col3.appendChild(btn3);
+        div2.appendChild(col4);
+        col4.appendChild(btn4);
+        div2.appendChild(col5);
+        col5.appendChild(btn5);
+        div2.appendChild(col6);
+        col6.appendChild(btn6);
+        div2.appendChild(col7);
+        col7.appendChild(btn7);
+        div2.appendChild(col8);
+        col8.appendChild(btn8);
+        div2.appendChild(col9);
+        col9.appendChild(btn9);
+        div2.appendChild(col10);
+        col10.appendChild(btn10);
+        div2.appendChild(col11);
+        col11.appendChild(btn11);
+        div2.appendChild(col12);
+        col12.appendChild(btn12);
+
+
+
+        document.body.append(div1);
+        
+        function createtable(){  
+        /* table creation only once for storing data */
+            var key=["id","name","email"];
+            for (let i = 0; i < 10; i++) 
+            {
+            var tr = document.createElement('tr');
+            {
+                var td = document.createElement('td');
+                td.innerText = detail[i][key[0]];
+                tr.appendChild(td);
+                var td = document.createElement('td');
+                td.innerText = detail[i][key[1]];
+                tr.appendChild(td);
+                var td = document.createElement('td');
+                td.innerText = detail[i][key[2]];
+                tr.appendChild(td);
+            }
+           tbody.appendChild(tr);
+            }
+        }
+
+        var cpage=1;
+
+        function displayData(){
+            
+            var key=["id","name","email"];
+            var min,max;
+            min=(cpage-1)*10;
+            max=min+9;
+            while(tbody.firstChild)
+            {
+                tbody.removeChild(tbody.firstChild);
+            }
+            for (let i = min; i <= max; i++) 
+            {
+            var tr = document.createElement('tr');
+            {
+                var td = document.createElement('td');
+                td.innerText = detail[i][key[0]];
+                tr.appendChild(td);
+                var td = document.createElement('td');
+                td.innerText = detail[i][key[1]];
+                tr.appendChild(td);
+                var td = document.createElement('td');
+                td.innerText = detail[i][key[2]];
+                tr.appendChild(td);
+            }
+            tbody.appendChild(tr);
+            }
+        }
+
+        function onclick1(){ cpage=1; displayData();}
+        function onclick2(){ cpage=2; displayData();}
+        function onclick3(){ cpage=3; displayData();}
+        function onclick4(){ cpage=4; displayData();}
+        function onclick5(){ cpage=5; displayData();}
+        function onclick6(){ cpage=6; displayData();}
+        function onclick7(){ cpage=7; displayData();}
+        function onclick8(){ cpage=8; displayData();}
+        function onclick9(){ cpage=9; displayData();}
+        function onclick10(){ cpage=10; displayData();}
+        function onclickprev()
+        { 
+            if(cpage==1)
+            cpage=1;
+            else 
+            {
+                cpage--; 
+                displayData();
+            } 
+        }
+        function onclicknext()
+        {
+            if(cpage==10)
+            cpage=10;
+            else
+            {
+                cpage++; 
+                displayData();
+            }
+        }
+
+    </script>
+
+    <!-- JS, Popper.js, and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</body>
+</html>
