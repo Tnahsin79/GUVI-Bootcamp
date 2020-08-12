@@ -1,7 +1,9 @@
 .div1{
-    background-color: lightblue;
+    background-color: rgb(154, 165, 168);
     text-align: center;
     color: black;
+    border: 5px solid white;
+    border-radius: 5px;
 }
 .div2{
     color: black;
@@ -28,4 +30,11 @@ td{
     color: black;
     font-size: 20px;
     text-align: center;
+}
+.div2{
+    background-color: black;
+}
+.col-1{
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
