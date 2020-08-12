@@ -1,0 +1,31 @@
+.div1{
+    background-color: lightblue;
+    text-align: center;
+    color: black;
+}
+.div2{
+    color: black;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.display-1{
+    color: black;
+}
+body{
+    background-color: black;
+}
+th{
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+}
+table{
+    border: 1px solid black;
+    text-align: center;
+}
+td{
+    color: black;
+    font-size: 20px;
+    text-align: center;
+}
