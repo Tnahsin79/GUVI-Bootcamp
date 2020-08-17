@@ -1,0 +1,40 @@
+.div1{
+    background-color: black;
+    text-align: center;
+    border: solid 5px white;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+#field{
+    width: 600px;
+    margin-top: 20px;
+}
+.display-1{
+    color: white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+body{
+    background-color: dimgrey;
+}
+#p{
+    color: chartreuse;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+#message1{
+    color: orange;
+    font-size: 100px;
+    font-family: 'Courier New', Courier, monospace;
+}
+#message2{
+    color: white;
+    font-size: 100px;
+    font-family: 'Courier New', Courier, monospace;
+}
+#message3{
+    color: chartreuse;
+    font-size: 100px;
+    font-family: 'Courier New', Courier, monospace;
+}
+hr{
+    border-top: 10px double white;
+}
