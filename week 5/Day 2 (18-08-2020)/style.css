@@ -1,0 +1,29 @@
+img{
+    width: 150px;
+    height: 100px;
+    margin: 5px;
+}
+body{
+    background-color: black;
+}
+.div1{
+    background-color: bisque;
+    text-align: center;
+    font-family: fantasy;
+}
+.row{
+    margin: 7px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+.col{
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 25px;
+    font-weight: bold;
+}
+.head{
+    font-family: fantasy;
+    font-size: 35px;
+    text-decoration: underline;
+}
