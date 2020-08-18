@@ -4,16 +4,19 @@ img{
     margin: 5px;
 }
 body{
-    background-color: black;
+    background-color: dimgrey;
 }
 .div1{
     background-color: bisque;
     text-align: center;
     font-family: fantasy;
+    margin-top: 15px;
+    border: 5px solid black;
+    border-radius: 10px;
 }
 .row{
     margin: 7px;
-    border: 1px solid black;
+    border: 2px solid black;
     border-radius: 10px;
 }
 .col{
