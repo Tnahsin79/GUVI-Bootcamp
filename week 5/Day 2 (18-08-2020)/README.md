@@ -1,2 +1,2 @@
-# NETLIFY LINK
+# NETLIFY LINK (Http Promise)
 ## 
