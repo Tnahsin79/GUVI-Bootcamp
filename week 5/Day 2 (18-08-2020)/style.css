@@ -22,11 +22,14 @@ body{
 .col{
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
-    font-size: 15px;
+    font-size: 1vw;
     font-weight: bold;
 }
 .head{
     font-family: fantasy;
-    font-size: 25px;
+    font-size: 2vw;
     text-decoration: underline;
+}
+.display-2{
+    font-size:5vw;
 }
