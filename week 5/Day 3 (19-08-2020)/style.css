@@ -1,0 +1,43 @@
+body{
+    background: #042E68;
+    background: -webkit-linear-gradient(right, #042E68, #181617);
+    background: -moz-linear-gradient(right, #042E68, #181617);
+    background: linear-gradient(to left, #042E68, #181617);
+}
+.div1{
+    text-align: center;
+
+}
+.display-3{
+    color: white;
+    font-size: 4vw;
+}
+img{
+    height: 150px;
+    width: 75px;
+}
+.row{
+    margin-top: 7px;
+    margin-bottom: 7px;
+}
+.card{
+    color: white;
+    background: #050210;
+    background: -webkit-linear-gradient(right, #050210, #C1BB90);
+    background: -moz-linear-gradient(right, #050210, #C1BB90);
+    background: linear-gradient(to left, #050210, #C1BB90);
+    border: 1px solid white;
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.card-header{
+    color: white;
+    background-color: black;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.btn{
+    background-color: transparent;
+    border: 1px solid white;
+}
+
